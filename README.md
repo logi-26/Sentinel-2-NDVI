@@ -28,7 +28,7 @@ Or the container can generate two different colour-maps dynamically using the pa
 After generating the colour-mapped NDVI GeoTIFF file, the container will generate a PNG file.
 
 ## Usage
-**Clone the repo.**<br/>
+Clone the repo.<br/>
 Put the red and nir bands into the "bands" directory.<br/>
 
 **Open a terminal in the repo root directory and build the image:**<br/>
