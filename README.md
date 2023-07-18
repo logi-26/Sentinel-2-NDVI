@@ -28,3 +28,19 @@ Or the container can generate two different colour-maps dynamically using the pa
 After generating the colour-mapped NDVI GeoTIFF file, the container will generate a PNG file.
 
 ## Usage
+**Clone the repo.**<br/>
+Put the red and nir bands into the "bands" directory.<br/>
+
+**Open a terminal in the repo root directory and build the image:**<br/>
+docker build -t indices_generator.<br/>
+
+**Run the container (replace the output path with a directory on the host system):**<br/>
+docker run -e PYTHONUNBUFFERED=1 -v /home/user/Desktop/indices_ndvi/output:/home/output indices_generator true 1<br/>
+
+**Paramaters explained:**<br/>
+1. **-e PYTHONUNBUFFERED=1** (directs the Python print statements to the terminal)<br/>
+1. **-v /home/user/Desktop/indices_ndvi/output:/home/output** (this mounts a directory from the host)<br/>
+1. **indices_generator** (image name)<br/>
+1. **true** (this tells the scripts to use a dynamic colour-map)<br/>
+1. **1** (this is the dynamic colour-map number)
+
