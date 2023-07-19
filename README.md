@@ -32,7 +32,7 @@ Clone the repo.<br/>
 Put the red and nir bands into the "bands" directory.<br/>
 
 **Open a terminal in the repo root directory and build the image:**<br/>
-docker build -t indices_generator.<br/>
+docker build -t indices_generator .<br/>
 
 **Run the container (replace the output path with a directory on the host system):**<br/>
 docker run -e PYTHONUNBUFFERED=1 -v /home/user/Desktop/indices_ndvi/output:/home/output indices_generator true 1<br/>
